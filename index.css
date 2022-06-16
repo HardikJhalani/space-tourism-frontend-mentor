@@ -115,7 +115,7 @@ select {
     background-color: hsl(var(--clr-dark));
 }
 
-.bg-acent {
+.bg-accent {
     background-color: hsl(var(--clr-light));
 }
 
@@ -127,10 +127,14 @@ select {
     color: hsl(var(--clr-dark));
 }
 
-.text-acent {
+.text-accent {
     color: hsl(var(--clr-light));
 }
 
 .text-white {
     color: hsl(var(--clr-white));
+}
+
+.example-component {
+    background-color: hsl(var(--clr-light) / 0.2);
 }
