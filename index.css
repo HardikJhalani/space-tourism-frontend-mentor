@@ -264,10 +264,30 @@ select {
 /* ---------------------- */
 
 .large-button {
+    position: relative;
+    z-index: 1;
     display: grid;
     padding: 0 2em;
     aspect-ratio: 1;
     place-items: center;
     text-decoration: none;
     border-radius: 50%;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    background: hsl(var(--clr-white) / 0.15);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    transform: scale(1.5);
+    opacity: 1;
 }
