@@ -130,6 +130,20 @@ select {
     margin-inline: auto;
 }
 
+.grid-container {
+    display: grid;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) minmax(0, 40rem) minmax(0, 40rem) minmax(2rem, 1fr);
+}
+
+.grid-container>*:first-child {
+    grid-column: 2;
+}
+
+.grid-container>*:last-child {
+    grid-column: 3;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
