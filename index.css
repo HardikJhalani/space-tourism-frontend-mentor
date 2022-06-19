@@ -294,6 +294,7 @@ select {
 
 .primary-navigation {
     --gap: 8rem;
+    --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -309,17 +310,15 @@ select {
 }
 
 .underline-indicators>* {
-    padding-bottom: 1rem;
+    padding: var(--underline-gap, 1rem) 0;
+    border-bottom: .2rem solid hsl(var(--clr-white) / 0);
 }
 
-.underline-indicators .active:active {
-    border-bottom: 3px solid hsl(var(--clr-white));
+.underline-indicators>*:hover,
+.underline-indicators>*:focus {
+    border-color: hsl(var(--clr-white) / .5);
 }
 
-.underline-indicators .hovered:hover {
-    border-bottom: 3px solid hsl(var(--clr-white) / 0.5);
-}
-
-.underline-indicators .idle {
-    border-bottom: 3px solid hsl(var(--clr-white) / 0);
+.underline-indicators>.active {
+    border-color: hsl(var(--clr-white) / 1);
 }
