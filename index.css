@@ -347,3 +347,26 @@ select {
 .dot-indicators>[aria-selected="true"] {
     background-color: hsl(var(--clr-white) / 1);
 }
+
+.number-selectors {
+    flex-direction: column;
+}
+
+.number-selectors>* {
+    cursor: pointer;
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 0;
+    border: 1px solid hsl(var(--clr-light) / 0.25);
+}
+
+.number-selectors>*:hover,
+.number-selectors>*:focus {
+    border: 1px solid hsl(var(--clr-light) / 1);
+}
+
+.number-selectors>[aria-selected="true"] {
+    background-color: hsl(var(--clr-light));
+    color: hsl(var(--clr-dark));
+}
