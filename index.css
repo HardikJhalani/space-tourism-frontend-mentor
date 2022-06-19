@@ -291,3 +291,35 @@ select {
     transform: scale(1.5);
     opacity: 1;
 }
+
+.primary-navigation {
+    --gap: 8rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a>span {
+    font-weight: 700;
+    margin-right: 0.5em;
+}
+
+.underline-indicators>* {
+    padding-bottom: 1rem;
+}
+
+.underline-indicators .active:active {
+    border-bottom: 3px solid hsl(var(--clr-white));
+}
+
+.underline-indicators .hovered:hover {
+    border-bottom: 3px solid hsl(var(--clr-white) / 0.5);
+}
+
+.underline-indicators .idle {
+    border-bottom: 3px solid hsl(var(--clr-white) / 0);
+}
